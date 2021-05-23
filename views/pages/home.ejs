@@ -1,0 +1,26 @@
+<div class="container mt-4 form-color shadow">
+    <p class="text-center h3">Generar RFC</p>
+    <form action="rfc" method="POST">
+        <div class="form-row">
+            <div class="col-md-4 mt-2">
+                <input name="nombres" type="text" class="form-control" placeholder="Nombres" required
+                    pattern="[A-Za-zñÑ ]+">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input name="ApellidoP" type="text" class="form-control" placeholder="Apellido Paterno" required
+                    pattern="[A-Za-zñÑ ]+">
+            </div>
+            <div class="col-md-4 mt-2">
+                <input name="ApellidoM" type="text" class="form-control" placeholder="Apellido Materno"
+                    pattern="[A-Za-zñÑ ]+">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-12 mt-3">
+                <input name="Fecha" class="form-control" id="date" type="date" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-danger btn-block mt-4">Generar</button>
+    </form>
+</div>
