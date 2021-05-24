@@ -30,7 +30,7 @@ function getRFC(data) {
                 ApellidoP = pApellido[0];
             }
         } else {
-            ApellidoP = pApellido;
+            ApellidoP = pApellido[0];
         }
     } else {
         ApellidoP = pApellido;
