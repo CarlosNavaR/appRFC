@@ -23,10 +23,14 @@ function getRFC(data) {
     }
 
     if (Array.isArray(pApellido)) {
-        if (wordSpecial.includes(pApellido[0])) {
-            ApellidoP = pApellido[1];
+        if (pApellido.length > 1) {
+            if (wordSpecial.includes(pApellido[0])) {
+                ApellidoP = pApellido[1];
+            } else {
+                ApellidoP = pApellido[0];
+            }
         } else {
-            ApellidoP = pApellido[0];
+            ApellidoP = pApellido;
         }
     } else {
         ApellidoP = pApellido;
