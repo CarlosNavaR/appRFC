@@ -14,29 +14,27 @@ function getRFC(data) {
     let apellidoM;
     let fecha = fechaNacimiento.substring(2, fechaNacimiento.length);
 
-    if (Array.isArray(name)) {
+    if (Array.isArray(name) && name.length > 1) {
         if (name[0].includes('MARIA') || name[0].substring(0, 2).includes('MA') || name[0].substring(0, 1).includes('J') || name[0].includes('JOSE')) {
             nombre = name[1];
         } else {
             nombre = name[0];
         }
+    } else {
+        nombre = name[0];
     }
 
-    if (Array.isArray(pApellido)) {
-        if (pApellido.length > 1) {
-            if (wordSpecial.includes(pApellido[0])) {
-                ApellidoP = pApellido[1];
-            } else {
-                ApellidoP = pApellido[0];
-            }
+    if (Array.isArray(pApellido) && pApellido.length > 1) {
+        if (wordSpecial.includes(pApellido[0])) {
+            ApellidoP = pApellido[1];
         } else {
             ApellidoP = pApellido[0];
         }
     } else {
         ApellidoP = pApellido;
     }
-
-    ApellidoP = ApellidoP.match(/^.*?([A-ZÑ])(?:.*?([AEIOU]))/i);
+    console.log(ApellidoP)
+    ApellidoP = ApellidoP[0].match(/^.*?([A-ZÑ])(?:.*?([AEIOU]))/i);
 
     if (ApellidoP != null) {
         if (ApellidoP[1] === 'Ñ') {

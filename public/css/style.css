@@ -61,3 +61,7 @@ ul>li :hover {
 .navbar-brand:hover {
     color: rgb(126, 105, 105);
 }
+
+.lead {
+    font-size: 3.5em;
+}
